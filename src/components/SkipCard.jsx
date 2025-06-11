@@ -31,9 +31,9 @@ const cardClass = `border rounded-md p-4 bg-gray-900 text-white transition-all d
         <span className="absolute top-3 right-2 z-20 bg-[#0037C1] text-white px-3 py-1 rounded-full text-sm font-medium shadow-md">
           {size} Yards
         </span>
-        {(!allowed_on_road || allows_heavy_waste) && (
+        {(allowed_on_road || allows_heavy_waste) && (
           <div className="absolute bottom-3 left-2 z-20 space-y-2">
-            {!allowed_on_road && (
+            {allowed_on_road && (
               <div className="bg-black/90 backdrop-blur-sm px-3 py-1.5 rounded-lg flex items-center gap-2">
             
               <AlertTriangle className="w-4 h-4 text-yellow-500" />
