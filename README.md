@@ -31,36 +31,22 @@ src/
 
 │ └── StepNavigation.jsx
 
-├── assets/
-
-│ └── images/
-
 ├── App.jsx
 
 ├── main.jsx
 
 tailwind.config.js
-
 postcss.config.js
-
 index.html
-
 
 ## 🔧 Setup Instructions
 
 1. **Clone the repository**:
-
-git clone https://github.com/yourusername/Business-Skip-Hire.git
-cd skip-selector
-
-2. Install dependencies:
-npm install
-
-3. Start the development server:
-npm run dev
-
-4. Open in browser:
-http://localhost:5173
+   1.1 git clone https://github.com/yourusername/Business-Skip-Hire.git
+2 cd skip-selector
+3. Install dependencies: npm install
+4. Start the development server: npm run dev
+5. Open in browser: http://localhost:5173
 
 🌐 API Integration
 To fetch skips dynamically:
