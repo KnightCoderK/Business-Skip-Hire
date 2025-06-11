@@ -1,4 +1,4 @@
-# Skip Selector App
+# Business Skip Hire App
 
 This is a React + Tailwind CSS project that allows users to select a skip bin size with a responsive step navigation UI, lightbox preview, filtering, and sorting.
 
