@@ -2,6 +2,8 @@
 
 This is a React + Tailwind CSS project that allows users to select a skip bin size with a responsive step navigation UI, lightbox preview, filtering, and sorting.
 
+Sandbox: https://s2rjwj-5173.csb.app/
+
 ![screencapture-localhost-5173-2025-06-12-01_53_00](https://github.com/user-attachments/assets/dc9803c8-4176-4a6d-9404-f29e1c9e88ff)
 
 
