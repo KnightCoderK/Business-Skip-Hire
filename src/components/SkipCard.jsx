@@ -1,6 +1,8 @@
 
 import React from "react";
-
+import {
+  AlertTriangle
+} from "lucide-react" ;
 const SkipCard = ({
   size,
   price,
@@ -29,15 +31,26 @@ const cardClass = `border rounded-md p-4 bg-gray-900 text-white transition-all d
         <span className="absolute top-3 right-2 z-20 bg-[#0037C1] text-white px-3 py-1 rounded-full text-sm font-medium shadow-md">
           {size} Yards
         </span>
-        {allowed_on_road===true && (
-          <span className="absolute bottom-2 left-2 bg-yellow-500 text-black text-xs px-2 py-1 rounded">
-            Not Allowed On The Road
-          </span>
-        )}
-        {allows_heavy_waste===true && (
-          <span className="absolute bottom-2 left-2 mt-6 bg-red-600 text-white text-xs px-2 py-1 rounded">
-            Not Suitable for Heavy Waste
-          </span>
+        {(!allowed_on_road || allows_heavy_waste) && (
+          <div className="absolute bottom-3 left-2 z-20 space-y-2">
+            {!allowed_on_road && (
+              <div className="bg-black/90 backdrop-blur-sm px-3 py-1.5 rounded-lg flex items-center gap-2">
+            
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+              <span className="text-xs font-medium text-yellow-500">
+                Not Allowed On The Road
+              </span>
+              </div>
+            )}
+            {allows_heavy_waste && (
+              <div className="bg-black/90 backdrop-blur-sm px-3 py-1.5 rounded-lg flex items-center gap-2">
+              <AlertTriangle className="w-4 h-4 text-red-500" />
+             <span className="text-xs font-medium text-red-500">
+                Not Suitable for Heavy Waste
+              </span>
+              </div>
+            )}
+          </div>
         )}
       </div>
       <h2 className="mt-2 text-lg font-semibold">{size} Yard Skip</h2>

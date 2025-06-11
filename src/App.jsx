@@ -82,6 +82,7 @@ const App = () => {
           <SkipCard
             key={skip.id}
             size={skip.size}
+            disabled={skip.forbidden}
             price={skip.price_before_vat}
             allowed_on_road={skip.allowed_on_road}
             allows_heavy_waste={skip.allows_heavy_waste}
