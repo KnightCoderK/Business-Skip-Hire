@@ -6,7 +6,8 @@ const SkipCard = ({
   price,
   hiredays,
   disabled,
-  warnings = [],
+  allowed_on_road,
+  allows_heavy_waste,
   imageSrc,
   selected,
   onSelect,
@@ -28,12 +29,12 @@ const cardClass = `border rounded-md p-4 bg-gray-900 text-white transition-all d
         <span className="absolute top-3 right-2 z-20 bg-[#0037C1] text-white px-3 py-1 rounded-full text-sm font-medium shadow-md">
           {size} Yards
         </span>
-        {warnings.includes("no-road") && (
+        {allowed_on_road===true && (
           <span className="absolute bottom-2 left-2 bg-yellow-500 text-black text-xs px-2 py-1 rounded">
             Not Allowed On The Road
           </span>
         )}
-        {warnings.includes("no-heavy") && (
+        {allows_heavy_waste===true && (
           <span className="absolute bottom-2 left-2 mt-6 bg-red-600 text-white text-xs px-2 py-1 rounded">
             Not Suitable for Heavy Waste
           </span>

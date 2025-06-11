@@ -9,8 +9,8 @@ const App = () => {
   const [skips, setSkips] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedSize, setSelectedSize] = useState(null);
-    const [selectedPrice, setSelectedPrice] = useState(null);
-      const [selectedHireDays, setSelectedHireDays] = useState(null);
+  const [selectedPrice, setSelectedPrice] = useState(null);
+  const [selectedHireDays, setSelectedHireDays] = useState(null);
   const [sortKey, setSortKey] = useState("size");
   const [modalImage, setModalImage] = useState(null);
 
@@ -54,8 +54,8 @@ const App = () => {
       <br/>
 
       <div className="text-center mb-6">
-        <h2 class="text-2xl font-bold text-center mb-4">Choose Your Skip Size</h2>
-        <p class="text-gray-400 text-center mb-8">Select the skip size that best suits your needs</p>
+        <h2 className="text-2xl font-bold text-center mb-4">Choose Your Skip Size</h2>
+        <p className="text-gray-400 text-center mb-8">Select the skip size that best suits your needs</p>
       </div>
      
 
@@ -83,6 +83,8 @@ const App = () => {
             key={skip.id}
             size={skip.size}
             price={skip.price_before_vat}
+            allowed_on_road={skip.allowed_on_road}
+            allows_heavy_waste={skip.allows_heavy_waste}
             hiredays={skip.hire_period_days}
             imageSrc={ "https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/"+skip.size+"-yarder-skip.jpg"}
             warnings={skip.warnings}
@@ -139,18 +141,18 @@ const App = () => {
 
 
       
-        <div class="fixed bottom-0 left-0 right-0 bg-[#1C1C1C] border-t border-[#2A2A2A] p-4 animate-slideUp z-50">
-          <div class="max-w-7xl mx-auto">
-            <div class="mb-3 text-xs text-gray-400 text-center leading-snug">Imagery and information shown throughout this website may not reflect the exact shape or size specification, colours may vary, options and/or accessories may be featured at additional cost.</div>
-            <div class="lg:hidden">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="font-medium">{selectedSize} Yard Skip</h3>
-                <div><span class="text-xl font-bold text-[#0037C1]">£{selectedPrice}</span>
-                <span class="text-sm text-gray-400 ml-2">{selectedPrice} days</span>
-                </div></div><div class="grid grid-cols-2 gap-3">
-                  <button class="btn-secondary w-full">Back</button>
-                  <button class="btn-primary w-full ">Continue</button>
-                  </div></div><div class="hidden lg:flex items-center justify-between"><div class="flex items-center gap-6"><div><p class="text-sm text-gray-400">{selectedSize} Yard Skip</p></div><div><span class="text-2xl font-bold text-[#0037C1]">£{selectedPrice}</span><span class="text-sm text-gray-400 ml-2">{selectedHireDays} day hire</span></div></div><div class="flex items-center gap-4"><button class="btn-secondary">Back</button><button class="btn-primary flex items-center gap-2 ">Continue<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div></div></div>
+        <div className="fixed bottom-0 left-0 right-0 bg-[#1C1C1C] border-t border-[#2A2A2A] p-4 animate-slideUp z-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-3 text-xs text-gray-400 text-center leading-snug">Imagery and information shown throughout this website may not reflect the exact shape or size specification, colours may vary, options and/or accessories may be featured at additional cost.</div>
+            <div className="lg:hidden">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-medium">{selectedSize} Yard Skip</h3>
+                <div><span className="text-xl font-bold text-[#0037C1]">£{selectedPrice}</span>
+                <span className="text-sm text-gray-400 ml-2">{selectedPrice} days</span>
+                </div></div><div className="grid grid-cols-2 gap-3">
+                  <button className="btn-secondary w-full">Back</button>
+                  <button className="btn-primary w-full ">Continue</button>
+                  </div></div><div className="hidden lg:flex items-center justify-between"><div className="flex items-center gap-6"><div><p className="text-sm text-gray-400">{selectedSize} Yard Skip</p></div><div><span className="text-2xl font-bold text-[#0037C1]">£{selectedPrice}</span><span className="text-sm text-gray-400 ml-2">{selectedHireDays} day hire</span></div></div><div className="flex items-center gap-4"><button className="btn-secondary">Back</button><button className="btn-primary flex items-center gap-2 ">Continue<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div></div></div>
 </div>
        
       )}
