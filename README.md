@@ -4,8 +4,6 @@ This is a React + Tailwind CSS project that allows users to select a skip bin si
 
 ![screencapture-localhost-5173-2025-06-12-01_53_00](https://github.com/user-attachments/assets/dc9803c8-4176-4a6d-9404-f29e1c9e88ff)
 
-![screencapture-localhost-5173-2025-06-12-02_04_32](https://github.com/user-attachments/assets/5888aae5-7d15-40cf-9e7a-8f7735ea78e1)
-
 
 
 ---
