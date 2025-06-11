@@ -24,15 +24,25 @@ This is a React + Tailwind CSS project that allows users to select a skip bin si
 ## 📁 Folder Structure
 src/
 ├── components/
+
 │ ├── SkipCard.jsx
+
 │ ├── SkipsList.jsx
+
 │ └── StepNavigation.jsx
+
 ├── assets/
+
 │ └── images/
+
 ├── App.jsx
+
 ├── main.jsx
+
 tailwind.config.js
+
 postcss.config.js
+
 index.html
 
 
